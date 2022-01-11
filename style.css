@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .header {
     background-color: rgb(50, 167, 145);
     width: 100%;
@@ -23,9 +24,16 @@
 
 main {
     display: flex;
+    justify-content: space-around;
 }
 
 #evaluation-form {
     display: flex;
     width: 675px;
+}
+
+#trybewarts-forms-logo{
+    height: 500px;
+    
+    
 }
