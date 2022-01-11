@@ -34,16 +34,16 @@
                     <option id="pytherina-house" value="Pytherina">Pytherina</option>
                 </select>
             </div>
-            <section>
+            <section id="family">
                 <h3 id="label-family">Qual sua família?</h3>
                 <label for="Frontend" >
-                    <input name="family" value="Frontend" type="radio">Frontend
+                    <input id="Frontend" name="family" value="Frontend" type="radio">Frontend
                 </label>
                 <label for="Backend">
-                    <input name="family" value="Backend" type="radio">Backend
+                    <input id="Backend" name="family" value="Backend" type="radio">Backend
                 </label>
                 <label for="FullStack">
-                    <input name="family" value="FullStack" type="radio">FullStack
+                    <input id="FullStack" name="family" value="FullStack" type="radio">FullStack
                 </label>
             </section>
             <section>
@@ -103,12 +103,16 @@
                     </label>
             </div>
 
-                <section>
-                    <label class="textarea" for="text-area">Deixe seu comentário:
-                        <textarea  maxlength="500"></textarea>
-                    </label>
+            <section>
+                <label class="textarea" for="text-area">Deixe seu comentário:
+                    <textarea  maxlength="500"></textarea>
+                </label>
             </section>
             
+            <section>
+                <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
+                <input type="checkbox" id="agreement">
+            </section>
             
 
 
