@@ -37,7 +37,7 @@ main {
   height: 500px;
 }
 
-#label-family {
+#family {
   display: flex;
   flex-direction: column;
 }
