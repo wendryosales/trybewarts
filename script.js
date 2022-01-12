@@ -42,11 +42,15 @@ txtarea.addEventListener('input', contador);
 
 // salvar os dados no sessionstorage
 
-const saveStore = () => {
+const saveStorage = () => {
   const dados = document.getElementsByTagName('input');
-  for (let i = 0; i < dados.length; i += 1) {
-    localStorage.setItem(dados[i].id, dados[i].value);
+  for (let i = 2; i < dados.length; i += 1) {
+    if (dados[i].checked === true) {
+      sessionStorage.setItem(dados[i].id, dados[i].value);
+    }
   }
 };
 
-saveStore();
+const botaoSubmit = document.querySelector('#submit-btn');
+
+botaoSubmit.addEventListener('click', saveStorage);
