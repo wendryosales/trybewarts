@@ -25,6 +25,8 @@ const enviarForm = document.querySelector('#submit-btn')
 function acepet() {
 if(aceitarTermos.checked){
   enviarForm.removeAttribute('disabled')
+}else{
+  enviarForm.setAttribute('disabled','disable')
 }
 
 }
