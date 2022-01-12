@@ -22,12 +22,12 @@
     <main>
         <form action="" id="evaluation-form">
 
-            <div class="section-content" class="line">
+            <div class="section-content line">
                 <input id="input-name" placeholder="Nome" type="text">
                 <input id="input-lastname" placeholder="Sobrenome" type="text">
             </div>
 
-            <div class="section-content" class="line">
+            <div class="section-content line">
                 <input id="input-email" placeholder="Email" type="text">
                 <select name="" id="house">
                     <option id="gitnoria-house" value="Gitnória">Gitnória</option>
@@ -37,7 +37,8 @@
                 </select>
             </div>
 
-            <section class="section-content" id="family">
+            <div class="container">
+            <section class="section-content family">
                 <h3 id="label-family">Qual sua família?</h3>
                 <label for="Frontend" >
                     <input id="Frontend" name="family" value="Frontend" type="radio">Frontend
@@ -50,28 +51,29 @@
                 </label>
             </section>
 
-            <section class="section-content">
+            <section class="section-content family">
                 <h3 for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</h3>
                 <label for="HoFs">
-                    <input type="checkbox" value="HoFs">HoFs
+                    <input id="HoFs" type="checkbox" value="HoFs">HoFs
                 </label>
                 <label for="Jest">
-                    <input type="checkbox" value="Jest">Jest
+                    <input id="Jest" type="checkbox" value="Jest">Jest
                 </label>
                 <label for="Promises"> 
-                    <input type="checkbox" value="Promises">Promises
+                    <input id="Promises" type="checkbox" value="Promises">Promises
                 </label>
                 <label for="React"> 
-                    <input type="checkbox" value="React">React
+                    <input id="React" type="checkbox" value="React">React
                 </label>
                 <label for="SQL"> 
-                    <input type="checkbox" value="SQL"> SQL
+                    <input id="SQL" type="checkbox" value="SQL"> SQL
                 </label>
                 <label for="Python"> 
-                    <input type="checkbox" value="Python"> 
+                    <input id="Python" type="checkbox" value="Python"> 
                     Python
                 </label>
             </section>
+            </div>
 
             <div class="evaluator">
                 <label for="rate" id="label-rate">Como você avalia a Trybewarts? </label>
@@ -113,7 +115,7 @@
                 </label>
             </section>
             
-            <section>
+            <section class="termo">
                 <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
                 <input type="checkbox" id="agreement" required>
             </section>
