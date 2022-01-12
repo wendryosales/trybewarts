@@ -39,3 +39,14 @@ function contador() {
 }
 
 txtarea.addEventListener('input', contador);
+
+// salvar os dados no sessionstorage
+
+const saveStore = () => {
+  const dados = document.getElementsByTagName('input');
+  for (let i = 0; i < dados.length; i += 1) {
+    localStorage.setItem(dados[i].id, dados[i].value);
+  }
+};
+
+saveStore();
