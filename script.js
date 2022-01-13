@@ -40,17 +40,43 @@ function contador() {
 
 txtarea.addEventListener('input', contador);
 
-// salvar os dados no sessionstorage
+// verifica se é TRUE as opções
 
-const saveStorage = () => {
-  const dados = document.getElementsByTagName('input');
-  for (let i = 2; i < dados.length; i += 1) {
-    if (dados[i].checked === true) {
-      sessionStorage.setItem(dados[i].id, dados[i].value);
+const verification = (classe) => {
+  const classi = document.getElementsByClassName(classe);
+
+  for (let i = 0; i < classi.length; i += 1) {
+    if (classi[i].checked === true) {
+      sessionStorage.setItem(classe, classi[i].value);
     }
   }
 };
 
-const botaoSubmit = document.querySelector('#submit-btn');
+// função para materia
 
+const materia = (classe) => {
+  const classi = document.getElementsByClassName(classe);
+  const array = [];
+
+  for (let i = 0; i < classi.length; i += 1) {
+    if (classi[i].checked === true) {
+      array.push(classi[i].value);
+      sessionStorage.setItem('materias', array);
+    }
+  }
+};
+
+// salvar os dados no sessionstorage
+
+const saveStorage = () => {
+  sessionStorage.setItem('nome', document.querySelector('#input-name').value);
+  sessionStorage.setItem('email', document.querySelector('#input-email').value);
+  sessionStorage.setItem('casa', document.querySelector('#house').selectedOptions[0].value);
+  verification('familia');
+  materia('materias');
+  verification('avaliacao');
+  sessionStorage.setItem('observacoes', document.querySelector('textarea').value);
+};
+
+const botaoSubmit = document.querySelector('#submit-btn');
 botaoSubmit.addEventListener('click', saveStorage);
