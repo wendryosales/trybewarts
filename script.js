@@ -40,7 +40,7 @@ function contador() {
 
 txtarea.addEventListener('input', contador);
 
-// verifica se é TRUE as opções
+// verifica se  as opções estão com o checked
 
 const verification = (classe) => {
   const classi = document.getElementsByClassName(classe);
@@ -70,13 +70,41 @@ const materia = (classe) => {
 
 const saveStorage = () => {
   sessionStorage.setItem('nome', document.querySelector('#input-name').value);
+  sessionStorage.setItem('sobrenome', document.querySelector('#input-lastname').value);
   sessionStorage.setItem('email', document.querySelector('#input-email').value);
   sessionStorage.setItem('casa', document.querySelector('#house').selectedOptions[0].value);
   verification('familia');
-  materia('materias');
+  materia('subject');
   verification('avaliacao');
   sessionStorage.setItem('observacoes', document.querySelector('textarea').value);
 };
 
+// Resgatar os dados no sessionStorage
+
+const resgateStorage = (chave) => {
+  const valor = sessionStorage.getItem(chave);
+  return valor;
+};
+
+const resgateMateria = (chave1) => {
+  const valor = sessionStorage.getItem(chave1);
+  const arrays = valor.split(','); // separa por virgula
+  return arrays.join(', '); // junta as palavras e coloca espaço no meio
+};
+
+// Mudar o html dentro do formulário
+
+const alterarHtml = () => {
+  saveStorage();
+  const formulario = document.querySelector('#evaluation-form');
+  formulario.innerHTML = `<p> Nome: ${resgateStorage('nome')} ${resgateStorage('sobrenome')}</p>
+  <p>Email: ${resgateStorage('email')}</p>
+  <p>Casa: ${resgateStorage('casa')}</p>
+  <p>Família: ${resgateStorage('familia')}</p>
+  <p>Matérias: ${resgateMateria('materias')}</p>
+  <p>Avaliação: ${resgateStorage('avaliacao')}</p>
+  <p>Observações: ${resgateStorage('observacoes')}</p>
+  `;
+};
 const botaoSubmit = document.querySelector('#submit-btn');
-botaoSubmit.addEventListener('click', saveStorage);
+botaoSubmit.addEventListener('click', alterarHtml);
