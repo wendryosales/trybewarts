@@ -52,7 +52,7 @@ const verification = (classe) => {
   }
 };
 
-// função para materia
+// função para salvar os dados das materias
 
 const materia = (classe) => {
   const classi = document.getElementsByClassName(classe);
