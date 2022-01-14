@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+#trybewarts-header-title {
+  color: white;
+}
 
 .header {
   background-color: rgb(50, 167, 145);
@@ -11,6 +14,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 3vh;
+  box-shadow: 3px 1px 7px rgb(88, 88, 88);
 }
 
 .trybewarts-login {
@@ -19,7 +25,8 @@
 }
 
 .trybewarts-header-logo {
-  height: 100px;
+  height: 10vh;
+  margin: 7px 0;
 }
 
 main {
@@ -29,13 +36,13 @@ main {
 
 #evaluation-form {
   display: flex;
-  width: 675px;
+  width: 80vh;
   flex-direction: column;
-  padding: 5%;
+  padding: 3% 0;
 }
 
 #trybewarts-forms-logo {
-  height: 500px;
+  height: 80vh;
 }
 
 .family {
@@ -105,4 +112,40 @@ footer {
 
 .termo label {
   margin-right: 5px;
+}
+
+.trybewarts-login input {
+  width: 200px;
+  padding: 7px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 13px;
+  border: none;
+  background-color: transparent ;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  transition: all 1s ease-in-out;
+  margin: 10px;
+}
+
+::-webkit-input-placeholder {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+
+.botaozinho {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  color: rgb(235, 235, 235);
+  margin: 0 15px;
+  padding: 10px 27px;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+.botaozinho:hover {
+  background-color: white;
+  transition: .7s ease;
 }
