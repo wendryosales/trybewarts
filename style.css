@@ -120,7 +120,7 @@ footer {
   width: 200px;
   padding: 7px;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: white;
   font-size: 13px;
   border: none;
   background-color: transparent;
@@ -129,7 +129,7 @@ footer {
   margin: 10px;
 }
 
-.trybewarts-login ::-webkit-input-placeholder {
+.trybewarts-login :-webkit-input-placeholder {
   color: white;
   font-weight: 300;
 }
@@ -150,7 +150,7 @@ footer {
   z-index: 2;
 }
 
-.botaozinho::before {
+.botaozinho:before {
   content: '';
   width: 100%;
   height: 100%;
@@ -160,7 +160,7 @@ footer {
   transition: all 0.7s;
 }
 
-.item1::before {
+.item1:before {
   width: 100%;
   height: 0%;
   top: 50%;
@@ -168,7 +168,7 @@ footer {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.item1:hover::before {
+.item1:hover:before {
   height: 375%;
 }
 
