@@ -233,10 +233,6 @@ footer {
   padding: 5px;
 }
 
-/* #evaluation-form input::-webkit-input-placeholder {
-  color: white;
-  font-weight: 300;
-} */
 #house {
   letter-spacing: 1px;
   font-size: 13px;
@@ -264,6 +260,7 @@ footer {
   display: block;
   margin: 10px 0;
   position: relative;
+  border: 1px solid #2B2E4A;
 }
 
 .inputGroup label {
