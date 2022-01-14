@@ -9,14 +9,14 @@
 }
 
 .header {
-  background-color: rgb(50, 167, 145);
+  background-color: #2B2E4A; /* rgb(50, 167, 145); */
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: rgb(255, 255, 255);
   font-size: 3vh;
   box-shadow: 3px 1px 7px rgb(88, 88, 88);
+  z-index: -1;
 }
 
 .trybewarts-login {
@@ -32,6 +32,8 @@
 main {
   display: flex;
   justify-content: space-around;
+  background: white;
+
 }
 
 #evaluation-form {
@@ -121,31 +123,70 @@ footer {
   color: #ffffff;
   font-size: 13px;
   border: none;
-  background-color: transparent ;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: transparent;
+  border-bottom: 1px solid #E84545;
   transition: all 1s ease-in-out;
   margin: 10px;
 }
 
-::-webkit-input-placeholder {
-  color: rgb(255, 255, 255);
-  font-weight: 900;
+.trybewarts-login ::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
 }
 
+/* referência do botão: https://www.youtube.com/watch?v=EZNc4yRQeK0 */
 .botaozinho {
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 11px;
-  font-weight: bold;
-  color: rgb(235, 235, 235);
-  margin: 0 15px;
-  padding: 10px 27px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 12px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+  color: white;
+  border: 1px solid #E84545;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 2;
 }
 
-.botaozinho:hover {
-  background-color: white;
-  transition: .7s ease;
+.botaozinho::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #E84545;
+  z-index: -1;
+  transition: all 0.7s;
 }
+
+.item1::before {
+  width: 100%;
+  height: 0%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.item1:hover::before {
+  height: 375%;
+}
+
+
+/*formulário*/
+
+#evaluation-form input {
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 13px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #2B2E4A;
+  transition: all 1s ease-in-out;
+
+}
+
+/* #evaluation-form input::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
+} */
