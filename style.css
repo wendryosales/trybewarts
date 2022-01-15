@@ -5,6 +5,9 @@
   font-family: serif, sans-serif;
 }
 
+
+  
+
 #trybewarts-header-title {
   color: white;
 }
@@ -33,8 +36,9 @@
 main {
   display: flex;
   justify-content: space-around;
-  background: white;
-
+  background-image: url(pngwing.com.png);
+  background-size: 100%;
+  Background-repeat: no-repeat;
 }
 
 #evaluation-form {
@@ -187,10 +191,10 @@ footer {
   padding: 5px;
 }
 
-/* #evaluation-form input::-webkit-input-placeholder {
+#evaluation-form input::-webkit-input-placeholder {
   color: white;
   font-weight: 300;
-} */
+} 
 #house {
   letter-spacing: 1px;
   font-size: 13px;
@@ -210,4 +214,3 @@ footer {
   transition: all 1s ease-in-out;
   padding: 5px;
 }
-
