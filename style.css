@@ -52,7 +52,8 @@ main {
 
 #evaluation-form {
   display: flex;
-  width: 80vh;
+  width: 50%;
+  max-width: 80vw;
   flex-direction: column;
   padding: 3% 0;
   z-index: 2;
@@ -64,7 +65,8 @@ main {
   align-content: space-around;
 }
 #trybewarts-forms-logo {
-  height: 80vh;
+  max-height: 80vh;
+  width: 40%;
   z-index: 1;
 }
 
@@ -93,9 +95,10 @@ main {
   margin: 5px;
 }
 
-.family h3 {
-  margin-bottom: 10px;
-  display: block;
+h3 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
@@ -124,9 +127,6 @@ footer {
 
 .section-content:nth-last-of-type(1) {
   flex-direction: row;
-  padding: 0 15px;
-  border-left: 1px solid #2B2E4A;
-  margin: 20px;
 }
 
 .container {
@@ -222,7 +222,7 @@ footer {
 
 /*formulário*/
 
-#evaluation-form input {
+#input-name , #input-lastname , #input-email {
   letter-spacing: 1px;
   color: #ffffff;
   font-size: 13px;
@@ -335,4 +335,95 @@ footer {
   transform: translateY(-50%);
   cursor: pointer;
   visibility: hidden;
+}
+
+/* radio buttons avaliação */
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.avaliacao {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #CFD8DC;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.avaliacao:hover {
+  background: #9faab7;
+}
+.avaliacao:checked {
+  background: #40e0d0;
+}
+.avaliacao:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.avaliacao:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.avaliacao.radio {
+  border-radius: 50%;
+}
+.avaliacao.radio::after {
+  border-radius: 50%;
+}
+
+.evaluator label {
+  display: flex;
+  align-items: flex-end;
+}
+
+.evaluator {
+  display: flex;
+  flex-direction: column;
+}
+
+.avaliacao-content {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 5px;
 }
